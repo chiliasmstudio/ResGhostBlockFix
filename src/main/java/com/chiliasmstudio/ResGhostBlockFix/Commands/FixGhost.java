@@ -46,7 +46,10 @@ public class FixGhost {
                             return 0;
                         }
                     }
-
+                    if(blockType == Material.BEDROCK || blockType == Material.VOID_AIR){
+                        sender.sendRichMessage("<red>Illegal operation</red>");
+                        return 0;
+                    }
                     block.setType(Material.SHORT_GRASS);
                     sender.sendRichMessage(String.format("<green>Replace Done!"));
                     return Command.SINGLE_SUCCESS;
