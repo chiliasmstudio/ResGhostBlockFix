@@ -28,7 +28,7 @@ public class FixGhost {
                         sender.sendRichMessage("<red>no permission</red>");
                         return 0;
                     } else if (!(sender instanceof Player)) {
-                        sender.sendPlainMessage("Only players can fly!");
+                        sender.sendRichMessage("<red>Only players can do this</red>");
                         return 0;
                     }
                     Player player = (Player) sender;
